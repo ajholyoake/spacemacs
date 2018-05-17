@@ -40,6 +40,7 @@
     stickyfunc-enhance
     xcscope
     yapfify
+    realgud
     ;; packages for anaconda backend
     anaconda-mode
     (company-anaconda :requires company)
@@ -331,7 +332,6 @@
         "'"  'spacemacs/python-start-or-switch-repl
         "cc" 'spacemacs/python-execute-file
         "cC" 'spacemacs/python-execute-file-focus
-        "db" 'spacemacs/python-toggle-breakpoint
         "ri" 'spacemacs/python-remove-unused-imports
         "sB" 'spacemacs/python-shell-send-buffer-switch
         "sb" 'python-shell-send-buffer
@@ -412,3 +412,7 @@ fix this issue."
       (when python-enable-yapf-format-on-save
         (add-hook 'python-mode-hook 'yapf-mode)))
     :config (spacemacs|hide-lighter yapf-mode)))
+
+(defun python/pre-init-realgud()
+  (spacemacs/add-realgud-debugger 'python-mode "ipdb")
+  (add-hook 'python-mode-hook 'realgud-short-key-mode))

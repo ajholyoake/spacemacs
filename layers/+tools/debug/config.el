@@ -2,7 +2,7 @@
 ;;
 ;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
-;; Author: Troy Hinckley <troy.hinckley@gmail.com>
+;; Author: troy.j.hinckley <troy.hinckley@gmail.com>
 ;; URL: https://github.com/syl20bnr/spacemacs
 ;;
 ;; This file is not part of GNU Emacs.
@@ -10,4 +10,9 @@
 ;;; License: GPLv3
 
 (defvar debug-additional-debuggers '()
-  "Additional RealGUD debuggers to be autoloaded.")
+  "additional realgud debuggers to be autoloaded.
+ This variable must be populated before debug layers is loaded.")
+
+(defvar debug-autoload-debuggers '()
+  "additional realgud debuggers to be autoloaded.
+ This variable must be populated before debug layers is loaded.")
