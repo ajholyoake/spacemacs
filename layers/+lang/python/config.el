@@ -45,3 +45,6 @@ Possible values are `on-visit', `on-project-switch' or `nil'.")
 
 (defvar python-sort-imports-on-save nil
   "If non-nil, automatically sort imports on save.")
+
+(defvar python-debugger "ipdb"
+  "Choose realgud python debugger")

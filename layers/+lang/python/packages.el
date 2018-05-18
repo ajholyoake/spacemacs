@@ -414,5 +414,5 @@ fix this issue."
     :config (spacemacs|hide-lighter yapf-mode)))
 
 (defun python/pre-init-realgud()
-  (spacemacs/add-realgud-debugger 'python-mode "ipdb")
+  (spacemacs/add-realgud-debugger 'python-mode python-debugger)
   (add-hook 'python-mode-hook 'realgud-short-key-mode))
